@@ -3,8 +3,13 @@ package com.labclinico.omega.citas;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import java.util.List;
 import java.util.Optional;
+
+
 
 @Service
 public class citasService {
@@ -35,6 +40,18 @@ public class citasService {
 
     public void updateCitas(Long id, citasModel citas) {
         citasRepository.save(citas);
+    }
+
+    //utilizamos un HashMap para almacenar y buscar citas de manera eficiente:
+
+    private Map<Long, citasModel> citasMap = new HashMap<>();
+
+    public citasModel obtenerCitaPorId(Long id) {
+        return citasMap.get(id);
+    }
+
+    public void agregarCita(citasModel cita) {
+        citasMap.put(cita.getId_cita(), cita);
     }
 
     

@@ -2,6 +2,7 @@ package com.labclinico.omega.analisis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -76,6 +77,24 @@ public class analisisController {
     @GetMapping("/analisis")
     public List<analisisModel> getAnalisisByTipo(@RequestParam String tipoAnalisis) {
         return analisisService.getAnalisisByTipoAnalisis(tipoAnalisis);
+    }
+
+    //@GetMapping("/buscarPorId")
+    //public ResponseEntity<analisisModel> buscarAnalisisPorId(@RequestParam String id) {
+    //    analisisModel analisis = analisisService.buscarAnalisisPorId(id);
+    //    return analisis != null ? ResponseEntity.ok(analisis) : ResponseEntity.notFound().build();
+    //}
+
+    @GetMapping("/ordenarPorFecha")
+    public ResponseEntity<List<analisisModel>> ordenarAnalisisPorFecha() {
+        analisisService.ordenarAnalisisPorFechaQuickSort();
+        return ResponseEntity.ok(analisisService.getAllAnalisis());
+    }
+
+    @PostMapping
+    public ResponseEntity<analisisModel> crearAnalisis(@RequestBody analisisModel analisis) {
+        analisisService.agregarAnalisis(analisis);
+        return ResponseEntity.status(HttpStatus.CREATED).body(analisis);
     }
 
 }

@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Data
 @Document(collection = "analisis")
-public class analisisModel {
+public class analisisModel implements Comparable<analisisModel> {
 
     @Id
     private String id;
@@ -26,5 +26,10 @@ public class analisisModel {
     private LocalDateTime fechaRecoleccion;
     private String estado;
     private Map<String, String> resultados;
+
+    @Override
+    public int compareTo(analisisModel other){
+        return this.id.compareTo(other.id);
+    }
 
 }
