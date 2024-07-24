@@ -22,6 +22,7 @@ Este proyecto es un sistema de gestión para un laboratorio clínico que incluye
 git clone https://github.com/tu_usuario/labclinico-omega.git
 cd labclinico-omega
 
+bash```
 ## Configurar la Base de Datos MySQL
 
 ###Crear una base de datos en MySQL:
