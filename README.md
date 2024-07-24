@@ -36,8 +36,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/labclinico
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 spring.jpa.hibernate.ddl-auto=update
-Configurar MongoDB
 ```
+### Configurar MongoDB
 
 Asegúrate de que MongoDB esté ejecutándose en tu máquina local y configurado en el puerto por defecto (27017).
 
