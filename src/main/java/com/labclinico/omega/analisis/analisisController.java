@@ -34,7 +34,7 @@ public class analisisController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public ResponseEntity<analisisModel> saveAnalisis(@RequestBody analisisModel analisis) {
         return ResponseEntity.ok(analisisService.saveAnalisis(analisis));
     }
@@ -91,7 +91,7 @@ public class analisisController {
         return ResponseEntity.ok(analisisService.getAllAnalisis());
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<analisisModel> crearAnalisis(@RequestBody analisisModel analisis) {
         analisisService.agregarAnalisis(analisis);
         return ResponseEntity.status(HttpStatus.CREATED).body(analisis);

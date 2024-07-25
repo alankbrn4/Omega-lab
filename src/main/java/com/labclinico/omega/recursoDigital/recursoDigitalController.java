@@ -55,7 +55,7 @@ public class recursoDigitalController {
         return ResponseEntity.ok(recursoDigitalService.buscarPorEtiquetas(etiquetas));
     }
 
-    @GetMapping
+    @GetMapping("/paginated")
     public ResponseEntity<List<recursoDigitalModel>> getAllRecursos(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         return ResponseEntity.ok(recursoDigitalService.getAllRecursos(page, size));
     }
