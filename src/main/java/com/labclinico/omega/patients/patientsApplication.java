@@ -6,14 +6,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class patientsApplication extends SpringBootServletInitializer {
+public class PatientsApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(patientsApplication.class);
+        return application.sources(PatientsApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(patientsApplication.class, args);
+        SpringApplication.run(PatientsApplication.class, args);
     }
 }

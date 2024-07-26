@@ -82,7 +82,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                    <mainClass>com.labclinico.omega.analisis.analisisApplication</mainClass>
+                    <mainClass>com.labclinico.omega.analisis.AnalisisApplication</mainClass>
             	</configuration>
 			</plugin>
 			

@@ -6,14 +6,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class recursoDigitalApplication extends SpringBootServletInitializer {
+public class RecursoDigitalApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(recursoDigitalApplication.class);
+        return application.sources(RecursoDigitalApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(recursoDigitalApplication.class, args);
+        SpringApplication.run(RecursoDigitalApplication.class, args);
     }
 }

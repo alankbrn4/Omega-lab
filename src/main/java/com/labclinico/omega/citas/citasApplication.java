@@ -6,14 +6,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class citasApplication extends SpringBootServletInitializer {
+public class CitasApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(citasApplication.class);
+        return application.sources(CitasApplication.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(citasApplication.class, args);
+        SpringApplication.run(CitasApplication.class, args);
     }
 }

@@ -82,7 +82,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                    <mainClass>com.labclinico.omega.patients.patientsApplication</mainClass>
+                    <mainClass>com.labclinico.omega.patients.PatientsApplication</mainClass>
             	</configuration>
 			</plugin>
 			
